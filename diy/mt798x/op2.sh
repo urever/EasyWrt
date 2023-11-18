@@ -2,7 +2,9 @@
 #=================================================
 # DaoDao's script
 #=================================================             
-
+git clone https://github.com/kenzok8/openwrt-packages package/openwrt-packages
+git clone https://github.com/kenzok8/small package/small
+git clone https://github.com/destan19/OpenAppFilter package/OpenAppFilter
 
 ##
 echo -e "\nmsgid \"Control\"" >> feeds/luci/modules/luci-base/po/zh_Hans/base.po
