@@ -131,13 +131,5 @@ jobs:
         name: ${{ steps.generate_name.outputs.release_name }}
         tag: ${{ steps.generate_name.outputs.release_tag }}
         token: ${{ secrets.GITHUB_TOKEN }}
-        
-    - name: Upload Aliyun
-      run: |  
-        cd ARM_Out
-        echo "请自动忽略META-INF文件夹。" > 忽略META-INF文件夹.txt
-        jar cf Redmi-AX6000-5.4-$(date +%Y%m%d).zip *
-        cd ..    
-        python diy/aliupload.py --token "${{ secrets.ALIYUN_TOKEN }}" --uploadFloder "EasyWrt/MT798x/AX6000_Redmi" --file "ARM_Out/Redmi-AX6000-5.4-$(date +%Y%m%d).zip"  
        
                                
