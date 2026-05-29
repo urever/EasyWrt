@@ -14,7 +14,7 @@ echo -e "msgstr \"魔法网络\"" >> feeds/luci/modules/luci-base/po/zh_Hans/bas
 
 
 ##配置IP
-sed -i 's/192.168.6.1/192.168.2.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.5.1/192.168.2.1/g' package/base-files/files/bin/config_generate
 ##取消bootstrap为默认主题
 sed -i '/set luci.main.mediaurlbase=\/luci-static\/bootstrap/d' feeds/luci/themes/luci-theme-bootstrap/root/etc/uci-defaults/30_luci-theme-bootstrap
 sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' feeds/luci/collections/luci/Makefile
@@ -40,5 +40,3 @@ git clone https://github.com/sbwml/packages_lang_golang -b 25.x feeds/packages/l
 
 ## rust
 rm -rf feeds/packages/lang/rust && git clone https://github.com/xiangfeidexiaohuo/extra-others && mv extra-others/rust feeds/packages/lang/
-
-
